@@ -50,6 +50,13 @@ void tick() {
 	if (dir == 2) s[0].x += 1;
 	if (dir == 3) s[0].y -= 1;
 
+	for (int i=0; i < 10;i++) {
+		if ((s[0].x == a[i].x) && (s[0].y == a[i].y)) {
+			num++; a[i].New();
+		}
+	}
+
+
 }
 
 
