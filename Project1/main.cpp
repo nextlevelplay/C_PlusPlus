@@ -1,4 +1,5 @@
 #include <GL/glut.h>
+#include <cstdlib>
 
 //float screen_width = 640, screen_height = 480;
 
@@ -18,6 +19,23 @@ struct
 	int y;
 }
 s[100];
+
+class Apple {
+public:
+	int x, y;
+
+	void New() {
+		x = rand() % n;
+		y = rand() % m;
+	}
+	void DrawApple() {
+		glColor3f(0.0, 1.0, 0.0);
+		glRectf(x * scale, y * scale, (x + 1) * scale, (y + 1) * scale);
+	}
+
+}
+a[10];
+
 
 void tick() {
 
@@ -70,6 +88,11 @@ void keyboard(int key, int a, int b) {
 static void display() {
 	
 	glClear(GL_COLOR_BUFFER_BIT);
+
+	for (int i = 0;i < 10;i++) {
+		a[i].DrawApple();
+	}
+
 	drawField();
 	drawSnake();
 	glFlush();
@@ -83,6 +106,11 @@ void timer(int = 0) {
 
 
 int main(int argc, char **argv) {
+	
+	for (int i = 0; i < 10;i++) {
+		a[i].New();
+	}
+	
 	s[0].x = 10;
 	s[0].y = 10;
 
