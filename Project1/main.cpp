@@ -3,9 +3,13 @@
 #include "apple.h"
 #include "game.h"
 #include "globals.h"
+#include "windows.h"
 
 
 int main(int argc, char** argv) {
+
+    ::ShowWindow(::GetConsoleWindow(), SW_HIDE);
+
     for (int i = 0; i < 10; i++)
         apples[i].New();
 
