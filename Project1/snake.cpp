@@ -24,7 +24,9 @@ void MoveSnake() {
 
     for (int i = 0; i < 10; i++) {
         if (snake[0].x == apples[i].x && snake[0].y == apples[i].y) {
-            num++; apples[i].New();
+            num++; 
+            score += 10;
+            apples[i].New();
         }
     }
 
