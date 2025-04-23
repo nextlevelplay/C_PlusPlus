@@ -1,4 +1,7 @@
 #pragma once
 
-extern int n, m, scale;
-extern int w, h;
+extern int w, h, n, m, scale, score;
+
+enum GameState{ MENU, PLAYING, PAUSED, GAMEOVER };
+
+extern GameState gameState;
