@@ -1,8 +1,2 @@
-﻿  apple.cpp
-  game.cpp
-  globals.cpp
-  main.cpp
-  snake.cpp
-  Generating Code...
-  LINK : C:\Users\boin1\source\repos\C_PlusPlus\Project1\Debug\Project1.exe not found or not built by the last incremental link; performing full link
+﻿  main.cpp
   Project1.vcxproj -> C:\Users\boin1\source\repos\C_PlusPlus\Project1\Debug\Project1.exe
