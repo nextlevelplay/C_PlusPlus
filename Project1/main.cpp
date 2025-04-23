@@ -50,10 +50,19 @@ void tick() {
 	if (dir == 2) s[0].x += 1;
 	if (dir == 3) s[0].y -= 1;
 
-	for (int i=0; i < 10;i++) {
+	for (int i = 0; i < 10;i++) {
 		if ((s[0].x == a[i].x) && (s[0].y == a[i].y)) {
 			num++; a[i].New();
 		}
+	}
+
+	if (s[0].x > n) dir = 1;
+	if (s[0].x < 0) dir = 2;
+	if (s[0].y > m) dir = 3;
+	if (s[0].y < 0) dir = 0;
+
+	for (int i = 1;i < num;i++) {
+		if (s[0].x == s[i].x && s[0].y == s[i].y) num = i;
 	}
 
 
@@ -126,7 +135,7 @@ int main(int argc, char **argv) {
 
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize(w, h);
-	glutCreateWindow("Test");
+	glutCreateWindow("SnakeGame_v0.03");
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluOrtho2D(0, w, 0, h);
